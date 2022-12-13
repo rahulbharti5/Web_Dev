@@ -1,0 +1,8 @@
+"/index.html",
+  "/css/bootstrap.css",
+  "/js/bootstrap.js",
+  "/img/icon-96x96.png",
+  "/img/icon-144x144.png",
+  "/img/icon-192x192.png",
+  "/img/logo.png",
+  "/404.html",

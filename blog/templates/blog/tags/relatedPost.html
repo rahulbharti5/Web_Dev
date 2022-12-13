@@ -1,0 +1,30 @@
+<div id="related-wrap" class="type-related">
+    <div class="title-wrap related-title">
+      <span class="title"><span class="t-text">You might like</span></span>
+    </div>
+    <div class="litespot-pro-related-content">
+      <div class="related-posts">
+       {% for r_post in all %}
+          
+          <div class="related-item item-{{ forloop.counter0 }}">
+            <a title="" class="entry-image-wrap is-image"
+            href="\blog/{{ r_post.slug }}"><span class="entry-thumb lazy-ify"
+              data-image=""
+              style="
+                background-image: url('{{ r_post.img.url }}');
+              "></span></a>
+            <div class="entry-header">
+            <h2 class="entry-title">
+              <a href="\blog/{{ r_post.slug }}/" title="">{{ r_post.title }}</a>
+            </h2>
+            <div class="entry-meta">
+              <span class="entry-time mi"><time class="published"
+                  datetime="2020-07-30T13:19:00.011-07:00">{{ r_post.created_on |date:'d F Y' }}</time></span>
+            </div>
+            </div>
+          </div>
+         
+       {% endfor %}
+      </div>
+    </div>
+  </div>

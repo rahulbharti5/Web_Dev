@@ -1,0 +1,26 @@
+ <!--
+ 
+ -->
+
+ 
+ {% for p_post in pop_post %}
+ <div class="default-item ds item-{{ forloop.counter0 }}">
+   <a class="entry-image-wrap is-image"
+     href="\blog/{{ p_post.slug}}"
+     title="Opera Browser Lets You Apply Dark Mode to Web Page"><span class="entry-thumb lazy-ify"
+       data-image="https://1.bp.blogspot.com/-lNDLOkYVctM/XyMrR9hlGrI/AAAAAAAACb8/kfHY383L6UMezRamt-tByetKTlxgT05vQCLcBGAsYHQ/w72-h72-p-k-no-nu/ify12.jpg"
+       style="
+           background-image: url('{{ p_post.img.url }}');
+         "></span>
+   </a>
+   <div class="entry-header">
+     <h2 class="entry-title">
+       <a href="\blog/{{ p_post.slug}}"
+         title="Opera Browser Lets You Apply Dark Mode to Web Page">{{ p_post.title }}</a>
+     </h2>
+     <div class="entry-meta">
+       <span class="entry-time mi"><time class="published" datetime="2020-07-30T13:19:00-07:00">{{ p_post.created_on |date:'d F Y' }}</time></span>
+     </div>
+   </div>
+ </div>  
+ {% endfor %}

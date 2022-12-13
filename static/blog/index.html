@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Smart Home</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js")
+        .then(res => {
+          console.log("service worker registered ")
+        })
+        .catch(err => {
+          console.log("error", err)
+        })
+    }
+  </script>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+  <div class="outer-wrapper">
+    <header class="header-wrap">
+      <h2 class="logo">
+        <a href="/index.html">Smart Home</a>
+      </h2>
+      <p id="status1">offline</p>
+    </header>
+    <main>
+      <p>This is Main Inspdex Page</p>
+      <a href="/test.html">Test Page</a>
+      updated 
+    </main>
+  </div>
+
+  <script>
+    var st= document.getElementById('status1');
+    console.log(status.innerHTML)
+      if(window.navigator.onLine == true){
+         st.innerHTML="Online";
+      }
+      else{
+         st.innerHTML = "Offline";
+      }
+    window.navigator.connection.onchange = e =>{
+      var d = window.navigator.onLine;
+      if(d == true){
+         st.innerHTML="Online";
+      }
+      else{
+         st.innerHTML = "Offline";
+      }
+    }
+  </script>
+  <script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
